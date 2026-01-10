@@ -1,3 +1,5 @@
+<?php include "koneksi.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +33,7 @@
 
   <header class="header" data-header>
     <div class="container">
-      <a href="index.html" class="logo logo-header">
+      <a href="index.php" class="logo logo-header">
         <img src="Media/Favicon.png" width="69" alt="The Tropical Ants logo">
       </a>
 
@@ -48,31 +50,31 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="index.html" class="navbar-link">
+            <a href="index.php" class="navbar-link">
               <span class="span">Home</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="menu.html" class="navbar-link">
+            <a href="menu.php" class="navbar-link">
               <span class="span">Menu</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="galeri.html" class="navbar-link">
+            <a href="galeri.php" class="navbar-link">
               <span class="span">Galeri</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="promo-event.html" class="navbar-link">
+            <a href="promo-event.php" class="navbar-link">
               <span class="span">Promo & Event</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="kontak-lokasi.html" class="navbar-link">
+            <a href="kontak-lokasi.php" class="navbar-link">
               <span class="span">Kontak & Lokasi</span>
             </a>
           </li>
@@ -94,7 +96,7 @@
 
       </nav>
 
-      <a href="kontak-lokasi.html#reservation" class="btn btn-slide">
+      <a href="kontak-lokasi.php#reservation" class="btn btn-slide">
         <span class="text text-1">Pesan Meja</span>
       </a>
 
@@ -1423,13 +1425,13 @@
         <ul class="ul-grid-list">
 
           <li>
-            <a href="index.html" class="label-2 grid-link">Home</a>
+            <a href="index.php" class="label-2 grid-link">Home</a>
           </li>
           <li>
-            <a href="menu.html" class="label-2 grid-link">Menu</a>
+            <a href="menu.php" class="label-2 grid-link">Menu</a>
           </li>
           <li>
-            <a href="kontak-lokasi.html" class="label-2 grid-link">Kontak</a>
+            <a href="kontak-lokasi.php" class="label-2 grid-link">Kontak</a>
           </li>
           <li>
             <a href="https://www.facebook.com/" class="label-2 grid-link">Facebook</a>
@@ -1449,7 +1451,7 @@
             <a href="https://youtube.com/" class="label-2 grid-link">Youtube</a>
           </li>
           <li>
-            <a href="kontak-lokasi.html" class="label-2 grid-link">GoogleMap</a>
+            <a href="kontak-lokasi.php" class="label-2 grid-link">GoogleMap</a>
           </li>
 
         </ul>

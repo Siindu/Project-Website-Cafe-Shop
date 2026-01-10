@@ -70,11 +70,11 @@ Website ini menyajikan berbagai informasi mengenai The Tropical Ants Cafe, seper
 
 ```bash
 /Project-Website-Cafe-Shop
-├── index.html               # Halaman utama website
-├── menu.html                # Halaman menu makanan dan minuman
-├── galeri.html              # Halaman galeri berisi foto suasana cafe
-├── promo-event.html         # Halaman promo dan event yang menarik
-├── kontak-lokasi.html       # Halaman kontak dan lokasi cafe
+├── index.php               # Halaman utama website
+├── menu.php                # Halaman menu makanan dan minuman
+├── galeri.php              # Halaman galeri berisi foto suasana cafe
+├── promo-event.php         # Halaman promo dan event yang menarik
+├── kontak-lokasi.php       # Halaman kontak dan lokasi cafe
 ├── README.md                # Dokumentasi project di GitHub
 ├── /css                     # Folder untuk file CSS
 │   ├── styles.css           # File utama untuk styling (jika menggunakan CSS murni)
