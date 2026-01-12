@@ -243,6 +243,35 @@
               </div>
             </div>
 
+            <?php
+            $ambil = mysqli_query($conn, "SELECT * FROM menu");
+            while($pecah = mysqli_fetch_assoc($ambil)) {
+            ?>
+              <li class="all <?php echo $pecah['kategori']; ?>">
+                <div class="menu-card hover:card card <?php echo $pecah['kategori']; ?>" data-name="<?php echo $pecah['kategori']; ?>">
+
+                  <figure class="card-banner img-holder" style="--width: 69; --height: 69;">
+                    <img src="Media/<?php echo $pecah['gambar']; ?>" width="69" height="69" loading="lazy" alt="Menu" class="img-cover">
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-2">
+                        <a class="card-title"><?php echo $pecah['nama_menu']; ?></a>
+                      </h3>
+                      
+                      <span class="span body-3">IDR.<?php echo number_format($pecah['harga'] / 1000); ?>K</span>
+                    </div>
+                    
+                    <p class="card-text label-1">
+                      <?php echo isset($pecah['deskripsi']) ? $pecah['deskripsi'] : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugiat esse minima!"; ?>
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+            <?php } ?>
+
             <li>
               <div class="menu-card hover:card card Makanan" data-name="Makanan" >
 

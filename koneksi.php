@@ -6,7 +6,7 @@ $db = "db_restoran";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-if (!conn) {
+if (!$conn) {
   die("Gagal terhubung ke database: " . mysqli_connect_error());
 }
 ?>
