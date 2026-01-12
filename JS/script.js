@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // SLIDE MENU & GALERI
 new Swiper('.menu .card-wrapper', {
   loop: true,
-    spaceBetween: 30,
+  spaceBetween: 30,
 
   pagination: {
     el: '.swiper-pagination',
@@ -167,16 +167,16 @@ new Swiper('.menu .card-wrapper', {
   },
 
   // Responsive brakpoints
-  breakpoints:{
+  breakpoints: {
     640: {
-        slidesPerView: 2
+      slidesPerView: 2
     }
   }
 });
 
 new Swiper('.galeri .card-wrapper', {
   loop: true,
-    spaceBetween: 30,
+  spaceBetween: 30,
 
   pagination: {
     el: '.swiper-pagination',
@@ -189,9 +189,9 @@ new Swiper('.galeri .card-wrapper', {
     prevEl: '.swiper-button-prev',
   },
 
-  breakpoints:{
+  breakpoints: {
     640: {
-        slidesPerView: 2
+      slidesPerView: 2
     },
     922: {
       slidesPerView: 3
@@ -234,53 +234,60 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // RESERVASI
-  const mejaPopup = document.getElementById("popup");
-  const overlay = document.getElementById("popupOverlay");
-  const pesanBtn = document.getElementById("pesanBtn");
-  const closeMejaPopup = document.getElementById("closePopupMeja");
   const phoneInput = document.getElementById("phone");
-
-  phoneInput.addEventListener("input", function () {
-  this.value = this.value.replace(/\D/g, "");
-  });
-
-  if (pesanBtn && mejaPopup && overlay && closeMejaPopup) {
-    pesanBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const person = document.getElementById("person").value;
-      const date = document.getElementById("reservation-date").value;
-      const time = document.getElementById("time").value;
-      const message = document.getElementById("message").value.trim();
-
-      if (!name || !phone || !person || !date || !time || !message) {
-        alert("Mohon lengkapi semua kolom sebelum memesan meja.");
-        return;
-      }
-
-      if (!/^\d+$/.test(phone)) {
-      alert("Nomor telepon hanya boleh berisi angka.");
-      return;
-      }
-
-      mejaPopup.classList.add("active");
-      overlay.classList.add("active");
-      document.body.classList.add("popup-open");
-
-      document.getElementById("name").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("person");
-      document.getElementById("reservation-date").value = "";
-      document.getElementById("time");
-      document.getElementById("message").value = "";
-    });
-
-    closeMejaPopup.addEventListener("click", function () {
-      mejaPopup.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("popup-open");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function () {
+      this.value = this.value.replace(/\D/g, "");
     });
   }
+
+  // const mejaPopup = document.getElementById("popup");
+  // const overlay = document.getElementById("popupOverlay");
+  // const pesanBtn = document.getElementById("pesanBtn");
+  // const closeMejaPopup = document.getElementById("closePopupMeja");
+  // const phoneInput = document.getElementById("phone");
+
+  // phoneInput.addEventListener("input", function () {
+  // this.value = this.value.replace(/\D/g, "");
+  // });
+
+  // if (pesanBtn && mejaPopup && overlay && closeMejaPopup) {
+  //   pesanBtn.addEventListener("click", function (e) {
+  //     e.preventDefault();
+
+  //     const name = document.getElementById("name").value.trim();
+  //     const phone = document.getElementById("phone").value.trim();
+  //     const person = document.getElementById("person").value;
+  //     const date = document.getElementById("reservation-date").value;
+  //     const time = document.getElementById("time").value;
+  //     const message = document.getElementById("message").value.trim();
+
+  //     if (!name || !phone || !person || !date || !time || !message) {
+  //       alert("Mohon lengkapi semua kolom sebelum memesan meja.");
+  //       return;
+  //     }
+
+  //     if (!/^\d+$/.test(phone)) {
+  //     alert("Nomor telepon hanya boleh berisi angka.");
+  //     return;
+  //     }
+
+  //     mejaPopup.classList.add("active");
+  //     overlay.classList.add("active");
+  //     document.body.classList.add("popup-open");
+
+  //     document.getElementById("name").value = "";
+  //     document.getElementById("phone").value = "";
+  //     document.getElementById("person");
+  //     document.getElementById("reservation-date").value = "";
+  //     document.getElementById("time");
+  //     document.getElementById("message").value = "";
+  //   });
+
+  //   closeMejaPopup.addEventListener("click", function () {
+  //     mejaPopup.classList.remove("active");
+  //     overlay.classList.remove("active");
+  //     document.body.classList.remove("popup-open");
+  //   });
+  // }
 });

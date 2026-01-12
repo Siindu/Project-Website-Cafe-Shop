@@ -144,45 +144,53 @@
 
         <div class="form-overlay form reservation-form">
 
-          <form action="" class="form-left">
+          <form action="reservasi-data.php" method="POST" class="form-left">
 
             <h2 class="headline-1 text-center">Reservasi Online</h2>
 
             <p class="form-text text-center">
-                Permintaan pemesanan <a href="tel:+628123456789" class="link">+62 812 345 6789</a>
-                atau isi formulir pemesanan
+              Permintaan pemesanan <a href="tel:+628123456789" class="link">+62 812 345 6789</a>
+              atau isi formulir pemesanan
             </p>
 
             <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Nama Anda" autocomplete="off" class="input-field" id="name">
-                <input type="tel" name="phone" placeholder="Nomor Telepon" autocomplete="off" class="input-field" id="phone">
+              <input type="text" name="nama_pelanggan" placeholder="Nama Anda" autocomplete="off" class="input-field" id="name" required>
+              <input type="tel" name="no_hp" placeholder="Nomor Telepon" autocomplete="off" class="input-field" id="phone" required>
             </div>
 
             <div class="input-wrapper">
               <div class="icon-wrapper">
-                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                <select name="person" class="input-field" id="person">
-                  <option value="1-person">1 Orang</option>
-                  <option value="2-person">2 Orang</option>
-                  <option value="3-person">3 Orang</option>
-                  <option value="4-person">4 Orang</option>
-                  <option value="5-person">5 Orang</option>
-                  <option value="6-person">6 Orang</option>
-                  <option value="7-person">7 Orang</option>
+                <ion-icon name="table-outline" aria-hidden="true"></ion-icon>
+                <select name="nomor_meja" class="input-field" id="table" required>
+                  <option value="1">Table 1</option>
+                  <option value="2">Table 2</option>
+                  <option value="3">Table 3</option>
+                  <option value="4">Table 4</option>
+                  <option value="5">Table 5</option>
+                  <option value="6">Table 6</option>
+                  <option value="7">Table 7</option>
+                  <option value="8">Table 8</option>
+                  <option value="9">Table 9</option>
+                  <option value="10">Table 10</option>
+                  <option value="11">Table 11</option>
+                  <option value="12">Table 12</option>
+                  <option value="13">Table 13</option>
+                  <option value="14">Table 14</option>
+                  <option value="15">Table 15</option>
+                  <option value="16">Table 16</option>
                 </select>
                 <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="icon-wrapper">
                 <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-                <input type="date" name="reservation-date" class="input-field"
-                id="reservation-date">
+                <input type="date" name="tanggal_reservasi" class="input-field" id="reservation-date" required>
                 <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="icon-wrapper">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                <select name="person" class="input-field" id="time">
+                <select name="jam_reservasi" class="input-field" id="time" required>
                   <option value="08:00 am">08:00 am</option>
                   <option value="09:00 am">09:00 am</option>
                   <option value="10:00 am">10:00 am</option>
@@ -204,18 +212,11 @@
               </div>
             </div>
 
-            <textarea name="message" placeholder="Pesan" autocomplete="off" class="input-field" id="message"></textarea>
+            <textarea name="pesan" placeholder="Pesan" autocomplete="off" class="input-field" id="message"></textarea>
 
-            <button type="submit" class="btn btn-slide" id="pesanBtn">
+            <button type="submit" name="submit_reservasi" class="btn btn-slide" id="pesanBtn">
               <span class="text text-1">Pesan Meja</span>
             </button>
-            
-            <div id="popupOverlay"></div>
-              <div id="popup">
-              <p>Terima kasih!</p>
-              <p>Meja berhasil di pesan</p>
-              <button id="closePopupMeja">Tutup</button>
-            </div>
 
           </form>
 
