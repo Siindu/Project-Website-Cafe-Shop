@@ -232,6 +232,67 @@
       </div>
     </section>
 
+    
+    <!-- Profile -->
+
+    <section class="section team text-center" id="team">
+      <div class="container">
+        
+        <div class="title-wrapper">
+          <p class="section-subtitle">Orang-orang di Balik Layar</p>
+          <h2 class="headline-1 section-title">Tim Tropical Ants</h2>
+        </div>
+
+        <div class="team-grid" style="
+          display: grid; 
+          grid-template-columns: repeat(3, 1fr); 
+          gap: 30px; 
+          margin-top: 50px; 
+          justify-items: center;
+        ">
+          
+          <?php
+          $res = mysqli_query($conn, "SELECT * FROM karyawan ORDER BY kategori ASC");
+          while($row = mysqli_fetch_assoc($res)) { ?>
+            
+            <div class="card-item" style="width: 100%; max-width: 320px;"> 
+              <div class="card-link" style="cursor: default; padding: 15px;"> 
+                
+                <figure class="card-banner img-holder" style="--width: 1125; --height: 1800; border-radius: 8px;">
+                  <img src="Media/<?php echo $row['foto']; ?>" class="card-image" alt="<?php echo $row['nama_karyawan']; ?>" 
+                       style="width: 100%; height: 100%; object-fit: cover;">
+                </figure>
+
+                <div class="card-content" style="padding: 20px 5px 10px;">
+                  <h3 class="title-2" style="font-size: 2rem;"><?php echo $row['nama_karyawan']; ?></h3>
+                  <p class="label-1" style="color: var(--gold-crayola); margin-top: 8px; font-size: 1.4rem; letter-spacing: 2px;">
+                    <?php echo $row['jabatan']; ?>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          <?php } ?>
+
+        </div>
+
+        <div class="team-group-photo" style="margin-top: 80px; width: 100%;">
+          <figure style="width: 100%; overflow: hidden; border-radius: 15px; border: 1px solid var(--white-alpha-10);">
+            <img src="Media/fotoBersama.png" alt="Tropical Ants Team" 
+                 style="width: 100%; height: auto; display: block; object-fit: contain;">
+          </figure>
+          <h3 class="title-1" style="margin-top: 25px; color: var(--gold-crayola);">Keluarga Besar The Tropical Ants</h3>
+        </div>
+
+        <img src="Media/shape-1.png" width="246" height="360" loading="lazy" alt="shape"
+        class="shape shape-1">
+        <img src="Media/shape-2.png" width="343" height="310" loading="lazy" alt="shape"
+        class="shape shape-6">
+
+      </div>
+    </section>
+
   </main>
 
 

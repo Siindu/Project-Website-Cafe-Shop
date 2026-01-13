@@ -942,6 +942,63 @@ body.popup-open-menu {
   border-radius: 1px;
 }
 
+/* Container Utama Tim */
+.team .container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  /* Jarak antar tingkatan */
+}
+
+/* Row untuk yang 1 orang (Leader & Staff Cowok) */
+.team-row.leader {
+  display: flex;
+  justify-content: center;
+}
+
+.team-row.leader .team-card {
+  max-width: 400px;
+  /* Ukuran foto orang tunggal agar tidak terlalu lebar */
+  width: 100%;
+}
+
+/* Grid untuk yang 2 orang (Chef & Staff Cewek) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Default 3 kolom untuk Desktop */
+  gap: 30px;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+/* Foto Bersama */
+.team-group-photo {
+  margin-top: 40px;
+}
+
+.team-group-photo .title-1 {
+  margin-top: 20px;
+  color: var(--gold-crayola);
+}
+
+/* Styling Kartu */
+.team-card {
+  background-color: var(--eerie-black-2);
+  padding-bottom: 20px;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-2);
+}
+
+.team-card:hover {
+  border-color: var(--gold-crayola);
+  transform: translateY(-10px);
+}
+
+.team-card .card-content {
+  padding-top: 20px;
+}
+
 
 /* PROMO & EVENT */
 
@@ -1516,6 +1573,11 @@ body.popup-open {
     left: 50%;
     height: 100%;
     border-inline-start: 1px solid var(--white-alpha-20);
+  }
+
+  /* Galeri */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Promo */
