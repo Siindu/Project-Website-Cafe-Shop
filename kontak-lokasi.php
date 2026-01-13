@@ -137,7 +137,7 @@
         class="shape shape-6">
 
       </div>
-      </section>
+    </section>
 
     <section class="reservation" id="reservation">
       <div class="container">
@@ -232,6 +232,45 @@
 
       </div>
     </section>
+
+    <section class="section testimoni-form">
+      <div class="container">
+        <h2 class="headline-1 text-center">Bagikan Pengalaman Anda</h2>
+        <div class="testimoni-list grid-list">
+          <?php
+          $ambil_testi = mysqli_query($conn, "SELECT * FROM testimoni WHERE status_tampil = 1 ORDER BY tanggal DESC LIMIT 6");
+          while($data = mysqli_fetch_assoc($ambil_testi)) {
+          ?>
+            <div class="testi-card card-item">
+              <p class="label-1"><?php echo str_repeat("⭐", $data['rating']); ?></p>
+              <p class="body-3">"<?php echo $data['komentar']; ?>"</p>
+              <h3 class="title-2">- <?php echo $data['nama_pelanggan']; ?></h3>
+            </div>
+          <?php } ?>
+        </div>
+        <form action="proses-testimoni.php" method="POST" class="form-left">
+          <input type="text" name="nama" placeholder="Nama" class="input-field" required>
+          
+          <div class="icon-wrapper">
+            <select name="rating" class="input-field" required>
+              <option value="" disabled selected>Berikan Rating</option>
+              <option value="5">⭐⭐⭐⭐⭐ (Sangat Puas)</option>
+              <option value="4">⭐⭐⭐⭐ (Puas)</option>
+              <option value="3">⭐⭐⭐ (Cukup)</option>
+              <option value="2">⭐⭐ (Kurang)</option>
+              <option value="1">⭐ (Buruk)</option>
+            </select>
+          </div>
+
+          <textarea name="komentar" placeholder="Pesan Ulasan" class="input-field" required></textarea>
+          
+          <button type="submit" name="submit_testimoni" class="btn btn-slide">
+            <span class="text text-1">Kirim Ulasan</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
 
